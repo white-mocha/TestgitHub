@@ -9,6 +9,7 @@ import dev.chu.testapp.data.GithubApi
 import dev.chu.testapp.databinding.ActivityMainBinding
 import dev.chu.testapp.entity.Repository
 import dev.chu.testapp.util.TAG
+import dev.chu.testapp.util.toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<Repository>, response: Response<Repository>) {
                 if (response.isSuccessful) {
                     Log.i(TAG, "onResponse isSuccessful data = ${response.body()}")
+                    toast("onResponse isSuccessful data = ${response.body()}")
                 }
             }
 
