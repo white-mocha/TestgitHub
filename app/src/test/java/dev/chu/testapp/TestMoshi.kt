@@ -26,7 +26,6 @@ class TestMoshi {
                 "  ]\n" +
                 "}"
 
-
         val moshi = Moshi.Builder()
             .add(CardAdapter())
             .build()
@@ -69,7 +68,6 @@ class TestMoshi {
         )
 
         val jsonAdapter = moshi.adapter(BlackjackHand::class.java)
-
         val json = jsonAdapter.toJson(blackjackHand)
         println(json)
     }
